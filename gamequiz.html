@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz Games Kuromi</title>
+  <link rel="stylesheet" href="style1.css" />
+  <link rel="stylesheet" href="style2.css" />
+  <style>
+
+    h1 {
+      color: #ff99cc;
+    }
+
+    .quiz-box {
+      background-color: #4a0044dd;
+      padding: 20px;
+      border-radius: 15px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 15px #ff66cc;
+    }
+
+    .question {
+      margin: 20px 0;
+    }
+
+    label {
+      display: block;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    button {
+      background-color: #ff66cc;
+      color: white;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #cc3399;
+    }
+
+    #result {
+      margin-top: 30px;
+      font-size: 1.3rem;
+      background-color: #fff;
+      color: #440044;
+      padding: 15px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+   🌙✨ All About Kuromi ✨🌙
+  </header>
+    
+    <nav>
+        <ul>
+          <li><a href="pengenalan.html"><img src="assets/kuromi-biodata.png" alt="🌙" /> <span>Introduction</span></a></li>
+          <li><a href="ramalan.html"><img src="assets/zodiak-menu.jpg" alt="🏠" /> <span>Zodiac Forecast</span></a></li>  
+          <li><a href="pertemanan.html"><img src="assets/pertemanan-menu.png" alt="🏠" /> <span>Friendship</span></a></li>
+          <li><a href="resep.html"><img src="assets/resep-menu.jpg" alt="👯‍♀️" /> <span>Kuromi Recipes</span></a></li>
+          <li><a href="fashion.html"><img src="assets/kuromi-fashion.jpg" alt="👗" /> <span>Fashion & Style</span></a></li>
+        <br> <br>
+          <li><a href="gamequiz.html" class="active"><img src="assets/quiz-menu.jpg" alt="🌙" /> <span>Quiz Games</span></a></li>
+          <li><a href="kuromi1.html"><img src="assets/home-menu.png" alt="👯‍♀️" /> <span>Home</span></a></li>
+          <li><a href="diary.html"><img src="assets/diary-menu.png" alt="📓" /> <span>Diary</span></a></li>
+          <li><a href="note.html"><img src="assets/note-menu.jpg" alt="📓" /> <span>Note</span></a></li>
+          <li><a href="lovestory.html"><img src="assets/love-menu.jpg" alt="👗" /> <span>Love Story</span></a></li>
+        </ul>
+    </nav>
+
+  <section class="sec-game">
+
+  <h1>💀 Kuis: Kamu Mirip Kuromi atau My Melody? 🎀</h1>
+
+  <div class="quiz-box">
+    <form id="quizForm">
+      <div class="question">
+        <p>1. Kamu lebih suka suasana seperti apa?</p>
+        <label><input type="radio" name="q1" value="kuromi"> Gelap dan misterius 😈</label>
+        <label><input type="radio" name="q1" value="melody"> Cerah dan manis 🌸</label>
+      </div>
+
+      <div class="question">
+        <p>2. Pilih minuman favoritmu:</p>
+        <label><input type="radio" name="q2" value="melody"> Bubble tea stroberi 🧋</label>
+        <label><input type="radio" name="q2" value="kuromi"> Kopi hitam dingin ☕</label>
+      </div>
+
+      <div class="question">
+        <p>3. Gaya fashionmu lebih ke arah?</p>
+        <label><input type="radio" name="q3" value="kuromi"> Gothic, edgy, dan dark 🖤</label>
+        <label><input type="radio" name="q3" value="melody"> Cute, pink, dan lembut 🎀</label>
+      </div>
+
+      <button type="button" onclick="checkResult()">Lihat Hasil</button>
+    </form>
+
+    <div id="result"></div>
+  </div>
+
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Kuromi Love Stories | Created by Putri 💜</p>
+  </footer>
+
+  <script>
+    function checkResult() {
+      let kuromi = 0;
+      let melody = 0;
+
+      const answers = document.querySelectorAll('input[type="radio"]:checked');
+
+      answers.forEach(answer => {
+        if (answer.value === "kuromi") {
+          kuromi++;
+        } else if (answer.value === "melody") {
+          melody++;
+        }
+      });
+
+      const resultBox = document.getElementById("result");
+      if (answers.length < 3) {
+        resultBox.innerHTML = "🛑 Jawab semua pertanyaan dulu ya!";
+        return;
+      }
+
+      if (kuromi > melody) {
+        resultBox.innerHTML = "💀 Kamu mirip Kuromi! Berani, edgy, dan unik!";
+      } else if (melody > kuromi) {
+        resultBox.innerHTML = "🎀 Kamu mirip My Melody! Manis, ceria, dan lembut!";
+      } else {
+        resultBox.innerHTML = "🔮 Kamu gabungan keduanya! Kadang edgy, kadang imut!";
+      }
+    }
+  </script>
+
+</body>
+</html>

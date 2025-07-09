@@ -1,0 +1,86 @@
+main {
+  padding: 20px;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.intro img {
+  width: 250px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.intro p {
+  max-width: 600px;
+  margin: auto;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.chat {
+  background-color: #2e2b34;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.chat h2 {
+  text-align: center;
+  color: #ffb3c6;
+}
+
+.bubble {
+  padding: 10px 15px;
+  margin: 10px 0;
+  border-radius: 15px;
+  max-width: 80%;
+}
+
+.kuromi {
+  background-color: #f06292;
+  color: white;
+  align-self: flex-start;
+}
+
+.badtz {
+  background-color: #7e57c2;
+  color: white;
+  align-self: flex-end;
+  text-align: right;
+  margin-left: auto;
+}
+
+.ending {
+  margin-top: 40px;
+  background-color: #3d2e4a;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+
+
+.lovestory-img {
+  text-align: center;
+  margin-top: 1.8em;
+}
+
+.lovestory-img img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 40px;
+  box-shadow: 0 10px 24px rgba(255, 105, 180, 0.6);
+  transition: transform 0.4s ease, filter 0.4s ease;
+  object-fit: contain;
+}
+
+.lovestory-img img:hover {
+  transform: rotate(5deg) scale(1.15);
+  filter: drop-shadow(4px 8px 10px rgba(255, 105, 180, 0.8));
+}

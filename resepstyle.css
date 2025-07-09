@@ -1,0 +1,50 @@
+main {
+  padding: 20px;
+}
+
+.recipe {
+  background-color: #2e2b34;
+  border: 2px dashed #f8bbd0;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+}
+
+/* flex container untuk teks + gambar */
+.recipe-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.recipe-content .text {
+  flex: 1;
+}
+
+.resep-img {
+  flex-shrink: 0;
+  max-width: 250px;
+  text-align: initial;
+}
+
+.resep-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 40px;
+  box-shadow: 0 10px 24px rgba(255, 105, 180, 0.6);
+  transition: transform 0.4s ease, filter 0.4s ease;
+  object-fit: contain;
+}
+
+.resep-img img:hover {
+  transform: rotate(2deg) scale(1.1);
+  filter: drop-shadow(4px 8px 10px rgba(255, 105, 180, 0.8));
+}
+
+.recipe h2 {
+  color: #ffb3c6;
+}
+
+ul, ol {
+  padding-left: 20px;
+}

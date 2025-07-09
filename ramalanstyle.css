@@ -1,0 +1,68 @@
+body {
+  text-align: center;
+  color: #9745fa;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.kuromi-img {
+  width: 150px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.zodiak-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.zodiak-list button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ab47bc;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.zodiak-list button:hover {
+  background-color: #8e24aa;
+}
+
+.ramalan-box {
+  margin-top: 30px;
+  background-color: #f3e5f5;
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 18px;
+}
+
+.ramalan-img {
+  text-align: center;
+  margin-top: 1.8em;
+}
+
+.ramalan-img img {
+  max-width: 150px;
+  height: auto;
+  border-radius: 40px;
+  box-shadow: 0 10px 24px rgba(255, 105, 180, 0.6);
+  transition: transform 0.4s ease, filter 0.4s ease;
+  object-fit: contain;
+}
+
+.ramalan-img img:hover {
+  transform: rotate(5deg) scale(1.15);
+  filter: drop-shadow(4px 8px 10px rgba(255, 105, 180, 0.8));
+}

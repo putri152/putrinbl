@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Ramalan Zodiak Kuromi 🔮</title>
+    <link rel="stylesheet" href="style1.css" />
+    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="ramalanstyle.css">
+</head>
+<body>
+
+  <header>
+  🌙✨ All About Kuromi ✨🌙
+  </header>
+
+    <nav>
+        <ul>
+          <li><a href="pengenalan.html"><img src="assets/kuromi-biodata.png" alt="🌙" /> <span>Introduction</span></a></li>
+          <li><a href="ramalan.html" class="active"><img src="assets/zodiak-menu.jpg" alt="🏠" /> <span>Zodiac Forecast</span></a></li>  
+          <li><a href="pertemanan.html"><img src="assets/pertemanan-menu.png" alt="🏠" /> <span>Friendship</span></a></li>
+          <li><a href="resep.html"><img src="assets/resep-menu.jpg" alt="👯‍♀️" /> <span>Kuromi Recipes</span></a></li>
+          <li><a href="fashion.html"><img src="assets/kuromi-fashion.jpg" alt="👗" /> <span>Fashion & Style</span></a></li>
+        <br> <br>
+          <li><a href="gamequiz.html"><img src="assets/quiz-menu.jpg" alt="🌙" /> <span>Quiz Games</span></a></li>
+          <li><a href="kuromi1.html"><img src="assets/home-menu.png" alt="👯‍♀️" /> <span>Home</span></a></li>
+          <li><a href="diary.html"><img src="assets/diary-menu.png" alt="📓" /> <span>Diary</span></a></li>
+          <li><a href="note.html"><img src="assets/note-menu.jpg" alt="📓" /> <span>Note</span></a></li>
+          <li><a href="lovestory.html"><img src="assets/love-menu.jpg" alt="👗" /> <span>Love Story</span></a></li>
+        </ul>
+    </nav>
+
+  <h1>🔮 Ramalan Zodiak Harian Kuromi 💜</h1>
+
+  <div class="ramalan-img">
+    <img src="assets/ramalan.jpg" alt="Kuromi">
+  </div>
+
+  <p>Pilih zodiakmu dan lihat ramalan ajaib dari Kuromi hari ini!</p>
+
+  <div class="zodiak-list">
+    <button onclick="showRamalan('aries')">♈ Aries</button>
+    <button onclick="showRamalan('taurus')">♉ Taurus</button>
+    <button onclick="showRamalan('gemini')">♊ Gemini</button>
+    <button onclick="showRamalan('cancer')">♋ Cancer</button>
+    <button onclick="showRamalan('leo')">♌ Leo</button>
+    <button onclick="showRamalan('virgo')">♍ Virgo</button>
+    <button onclick="showRamalan('libra')">♎ Libra</button>
+    <button onclick="showRamalan('scorpio')">♏ Scorpio</button>
+    <button onclick="showRamalan('sagitarius')">♐ Sagitarius</button>
+    <button onclick="showRamalan('capricorn')">♑ Capricorn</button>
+    <button onclick="showRamalan('aquarius')">♒ Aquarius</button>
+    <button onclick="showRamalan('pisces')">♓ Pisces</button>
+  </div>
+
+  <div class="ramalan-box" id="ramalanBox">
+    🌟 Pilih zodiak untuk melihat ramalanmu hari ini...
+  </div>
+  <br><br><br>
+
+  <footer>
+    <p>&copy; 2025 Kuromi Love Stories | Created by Putri 💜</p>
+  </footer>
+
+  <script>
+    const ramalan = {
+      aries: "Hari ini kamu penuh semangat, tapi jangan lupa makan ya! 🍙 Kuromi bangga sama kamu!",
+      taurus: "Waktunya manjain diri sendiri! Bubble tea atau istirahat panjang cocok banget untukmu. 🧋",
+      gemini: "Pikiranmu bercabang-cabang... tapi ide-ide itu akan jadi kejutan bagus hari ini! 💡",
+      cancer: "Emosi naik turun? Kuromi sarankan: tidur siang dan peluk bantal. 😴",
+      leo: "Bersinar seperti bintang! Tapi ingat, kadang butuh diam agar cahaya terasa ✨",
+      virgo: "Detail itu penting, tapi jangan lupa ketawa yaa. Hari ini waktunya lebih santai! 🎈",
+      libra: "Keseimbangan adalah kuncinya. Kuromi bilang: jangan baper, tetap cute! 🧘‍♀",
+      scorpio: "Hari ini aura misterimu makin kuat. Manfaatkan buat wow-in semua orang 🔮",
+      sagitarius: "Petualangan? YES! Tapi bawa cemilan ya biar nggak cranky. 🧃",
+      capricorn: "Fokus dan tangguh, tapi ingat senyum juga kerja keras loh! 😌",
+      aquarius: "Kreatif banget hari ini! Gambar? Tulis? Buat sesuatu yang imut yuk ✏",
+      pisces: "Lembut dan penuh imajinasi. Hari ini cocok buat denger lagu dan berkhayal 🎧"
+    };
+
+    function showRamalan(zodiak) {
+      const box = document.getElementById("ramalanBox");
+      box.innerHTML = ramalan[zodiak] || "Zodiaknya lagi libur, hehe 😅";
+    }
+  </script>
+
+</body>
+</html>
